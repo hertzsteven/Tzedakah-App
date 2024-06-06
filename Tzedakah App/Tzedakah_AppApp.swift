@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct Tzedakah_AppApp: App {
+    init() {
+     // Large Navigation Title
+     UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.purple]
+     // Inline Navigation Title
+     UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.purple]
+   }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavContentView()
         }
     }
 }
