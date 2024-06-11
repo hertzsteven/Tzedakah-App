@@ -18,7 +18,7 @@ struct Tzedakah_AppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavContentView()
+            TabMasterView()
         }
     }
 }

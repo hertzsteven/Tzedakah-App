@@ -13,6 +13,8 @@
 		4627D8CE2C10F68900987BAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4627D8CD2C10F68900987BAD /* Preview Assets.xcassets */; };
 		4627D8D52C11024000987BAD /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627D8D42C11024000987BAD /* NavBar.swift */; };
 		466A1FCE2C1784B500CBAA07 /* CharityCampaintileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */; };
+		46E80E552C17D626006EDAC1 /* TabMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E80E542C17D626006EDAC1 /* TabMasterView.swift */; };
+		46E80E572C17F68B006EDAC1 /* explore list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E80E562C17F68B006EDAC1 /* explore list.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		4627D8CD2C10F68900987BAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4627D8D42C11024000987BAD /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCampaintileView.swift; sourceTree = "<group>"; };
+		46E80E542C17D626006EDAC1 /* TabMasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMasterView.swift; sourceTree = "<group>"; };
+		46E80E562C17F68B006EDAC1 /* explore list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "explore list.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */,
 				4627D8CA2C10F68900987BAD /* Assets.xcassets */,
 				4627D8CC2C10F68900987BAD /* Preview Content */,
+				46E80E542C17D626006EDAC1 /* TabMasterView.swift */,
+				46E80E562C17F68B006EDAC1 /* explore list.swift */,
 			);
 			path = "Tzedakah App";
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E80E552C17D626006EDAC1 /* TabMasterView.swift in Sources */,
 				4627D8C92C10F68700987BAD /* OpeningScreenView.swift in Sources */,
+				46E80E572C17F68B006EDAC1 /* explore list.swift in Sources */,
 				466A1FCE2C1784B500CBAA07 /* CharityCampaintileView.swift in Sources */,
 				4627D8C72C10F68700987BAD /* Tzedakah_AppApp.swift in Sources */,
 				4627D8D52C11024000987BAD /* NavBar.swift in Sources */,

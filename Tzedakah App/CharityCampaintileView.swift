@@ -81,8 +81,11 @@ struct CharityCampaintileView: View {
                         }
                 }
             }
+            .scrollTargetLayout()
             .frame( height: 430, alignment: .top)
         }
+        .scrollTargetBehavior(.viewAligned)
+        .safeAreaPadding(.horizontal, 20.0)
 
     }
 }
