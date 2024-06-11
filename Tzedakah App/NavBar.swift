@@ -7,7 +7,20 @@
 
 import SwiftUI
 
-import SwiftUI
+
+struct NavContentView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("Hello, SwiftUI!")
+                    .navigationBarTitle("Home", displayMode: .inline)
+            }
+            
+            .navigationBarColor(UIColor(.navBar))
+//            .preferredColorScheme(.dark)
+        }
+    }
+}
 
 struct NavigationBarModifier: ViewModifier {
     var backgroundColor: UIColor?
@@ -36,18 +49,6 @@ extension View {
     }
 }
 
-struct NavContentView: View {
-    var body: some View {
-        NavigationView {
-            VStack {
-                Text("Hello, SwiftUI!")
-                    .navigationBarTitle("Home", displayMode: .inline)
-            }
-            .navigationBarColor(UIColor.systemBlue)
-            .preferredColorScheme(.dark)
-        }
-    }
-}
 
 struct ContentView_PreviewsNav: PreviewProvider {
     static var previews: some View {

@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		4627D8C72C10F68700987BAD /* Tzedakah_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627D8C62C10F68700987BAD /* Tzedakah_AppApp.swift */; };
-		4627D8C92C10F68700987BAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627D8C82C10F68700987BAD /* ContentView.swift */; };
+		4627D8C92C10F68700987BAD /* OpeningScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627D8C82C10F68700987BAD /* OpeningScreenView.swift */; };
 		4627D8CB2C10F68900987BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4627D8CA2C10F68900987BAD /* Assets.xcassets */; };
 		4627D8CE2C10F68900987BAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4627D8CD2C10F68900987BAD /* Preview Assets.xcassets */; };
 		4627D8D52C11024000987BAD /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627D8D42C11024000987BAD /* NavBar.swift */; };
+		466A1FCE2C1784B500CBAA07 /* CharityCampaintileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4627D8C32C10F68700987BAD /* Tzedakah App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tzedakah App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4627D8C62C10F68700987BAD /* Tzedakah_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tzedakah_AppApp.swift; sourceTree = "<group>"; };
-		4627D8C82C10F68700987BAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4627D8C82C10F68700987BAD /* OpeningScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningScreenView.swift; sourceTree = "<group>"; };
 		4627D8CA2C10F68900987BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4627D8CD2C10F68900987BAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4627D8D42C11024000987BAD /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCampaintileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			children = (
 				4627D8C62C10F68700987BAD /* Tzedakah_AppApp.swift */,
 				4627D8D42C11024000987BAD /* NavBar.swift */,
-				4627D8C82C10F68700987BAD /* ContentView.swift */,
+				46E80E522C17CF94006EDAC1 /* Screens */,
+				466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */,
 				4627D8CA2C10F68900987BAD /* Assets.xcassets */,
 				4627D8CC2C10F68900987BAD /* Preview Content */,
 			);
@@ -68,6 +71,22 @@
 				4627D8CD2C10F68900987BAD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		46E80E522C17CF94006EDAC1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				46E80E532C17CFA9006EDAC1 /* OpeningScreenView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		46E80E532C17CFA9006EDAC1 /* OpeningScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				4627D8C82C10F68700987BAD /* OpeningScreenView.swift */,
+			);
+			path = OpeningScreenView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4627D8C92C10F68700987BAD /* ContentView.swift in Sources */,
+				4627D8C92C10F68700987BAD /* OpeningScreenView.swift in Sources */,
+				466A1FCE2C1784B500CBAA07 /* CharityCampaintileView.swift in Sources */,
 				4627D8C72C10F68700987BAD /* Tzedakah_AppApp.swift in Sources */,
 				4627D8D52C11024000987BAD /* NavBar.swift in Sources */,
 			);
