@@ -96,7 +96,8 @@ struct CharityCampaintileView: View {
                 
                   DonateNowButton2(itm: item)
                 .navigationDestination(for: CharityCampaign.self) { campaign in
-                  Text("This is the next view. and color is 1 \(campaign.name)")
+                    CampaignDetailScreenView(charityCampaign: campaign)
+//                  Text("This is the bbbb next view. and color is 1 \(campaign.name)")
                 }
                 
               }
@@ -108,11 +109,6 @@ struct CharityCampaintileView: View {
     }
     .scrollTargetBehavior(.viewAligned)
     .safeAreaPadding(.horizontal, 20.0)
-    
-    .navigationDestination(for: String.self) { campaign in
-      Text("This is the next view. and color is \(campaign)")
-    }
-    
   }
 }
 

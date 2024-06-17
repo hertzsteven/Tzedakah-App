@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OpeningScreenView: View {
+    
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
     }

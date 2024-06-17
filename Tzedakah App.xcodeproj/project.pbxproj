@@ -61,14 +61,12 @@
 		4627D8C52C10F68700987BAD /* Tzedakah App */ = {
 			isa = PBXGroup;
 			children = (
-				4627D8C62C10F68700987BAD /* Tzedakah_AppApp.swift */,
-				4627D8D42C11024000987BAD /* NavBar.swift */,
-				46E80E522C17CF94006EDAC1 /* Screens */,
-				466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */,
 				4627D8CA2C10F68900987BAD /* Assets.xcassets */,
 				4627D8CC2C10F68900987BAD /* Preview Content */,
-				46E80E542C17D626006EDAC1 /* TabMasterView.swift */,
-				46E80E562C17F68B006EDAC1 /* explore list.swift */,
+				463E99DD2C1F6C8900A0242D /* app */,
+				46E80E522C17CF94006EDAC1 /* Screens */,
+				463E99DF2C1F6CD500A0242D /* Navigation */,
+				463E99DE2C1F6CA400A0242D /* Explore and test */,
 			);
 			path = "Tzedakah App";
 			sourceTree = "<group>";
@@ -79,6 +77,31 @@
 				4627D8CD2C10F68900987BAD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		463E99DD2C1F6C8900A0242D /* app */ = {
+			isa = PBXGroup;
+			children = (
+				4627D8C62C10F68700987BAD /* Tzedakah_AppApp.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		463E99DE2C1F6CA400A0242D /* Explore and test */ = {
+			isa = PBXGroup;
+			children = (
+				46E80E562C17F68B006EDAC1 /* explore list.swift */,
+			);
+			path = "Explore and test";
+			sourceTree = "<group>";
+		};
+		463E99DF2C1F6CD500A0242D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4627D8D42C11024000987BAD /* NavBar.swift */,
+				46E80E542C17D626006EDAC1 /* TabMasterView.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		46731BBE2C1881B300B121B3 /* CampaignDetailScreenView */ = {
@@ -102,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				4627D8C82C10F68700987BAD /* OpeningScreenView.swift */,
+				466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */,
 			);
 			path = OpeningScreenView;
 			sourceTree = "<group>";
