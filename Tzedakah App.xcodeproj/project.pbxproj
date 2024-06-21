@@ -16,6 +16,9 @@
 		46731BC02C1881F200B121B3 /* CampaignDetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46731BBF2C1881F200B121B3 /* CampaignDetailScreenView.swift */; };
 		46E80E552C17D626006EDAC1 /* TabMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E80E542C17D626006EDAC1 /* TabMasterView.swift */; };
 		46E80E572C17F68B006EDAC1 /* explore list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E80E562C17F68B006EDAC1 /* explore list.swift */; };
+		46E823012C21C5DE008BBBF6 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E823002C21C5DE008BBBF6 /* CustomModifiers.swift */; };
+		46E823032C225287008BBBF6 /* ImageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E823022C225287008BBBF6 /* ImageGallery.swift */; };
+		46E823052C244583008BBBF6 /* ExploreLazyVgrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E823042C244583008BBBF6 /* ExploreLazyVgrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		46731BBF2C1881F200B121B3 /* CampaignDetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailScreenView.swift; sourceTree = "<group>"; };
 		46E80E542C17D626006EDAC1 /* TabMasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMasterView.swift; sourceTree = "<group>"; };
 		46E80E562C17F68B006EDAC1 /* explore list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "explore list.swift"; sourceTree = "<group>"; };
+		46E823002C21C5DE008BBBF6 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		46E823022C225287008BBBF6 /* ImageGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGallery.swift; sourceTree = "<group>"; };
+		46E823042C244583008BBBF6 /* ExploreLazyVgrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLazyVgrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				4627D8CA2C10F68900987BAD /* Assets.xcassets */,
+				46E822FF2C21C5AD008BBBF6 /* Custom Modifiers */,
 				4627D8CC2C10F68900987BAD /* Preview Content */,
 				463E99DD2C1F6C8900A0242D /* app */,
 				46E80E522C17CF94006EDAC1 /* Screens */,
@@ -91,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				46E80E562C17F68B006EDAC1 /* explore list.swift */,
+				46E823022C225287008BBBF6 /* ImageGallery.swift */,
+				46E823042C244583008BBBF6 /* ExploreLazyVgrid.swift */,
 			);
 			path = "Explore and test";
 			sourceTree = "<group>";
@@ -128,6 +137,14 @@
 				466A1FCD2C1784B500CBAA07 /* CharityCampaintileView.swift */,
 			);
 			path = OpeningScreenView;
+			sourceTree = "<group>";
+		};
+		46E822FF2C21C5AD008BBBF6 /* Custom Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				46E823002C21C5DE008BBBF6 /* CustomModifiers.swift */,
+			);
+			path = "Custom Modifiers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,11 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E823052C244583008BBBF6 /* ExploreLazyVgrid.swift in Sources */,
+				46E823032C225287008BBBF6 /* ImageGallery.swift in Sources */,
 				46E80E552C17D626006EDAC1 /* TabMasterView.swift in Sources */,
 				4627D8C92C10F68700987BAD /* OpeningScreenView.swift in Sources */,
 				46E80E572C17F68B006EDAC1 /* explore list.swift in Sources */,
 				466A1FCE2C1784B500CBAA07 /* CharityCampaintileView.swift in Sources */,
 				4627D8C72C10F68700987BAD /* Tzedakah_AppApp.swift in Sources */,
+				46E823012C21C5DE008BBBF6 /* CustomModifiers.swift in Sources */,
 				46731BC02C1881F200B121B3 /* CampaignDetailScreenView.swift in Sources */,
 				4627D8D52C11024000987BAD /* NavBar.swift in Sources */,
 			);

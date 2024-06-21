@@ -54,8 +54,8 @@ struct CampaignDetailScreenView: View {
 
 extension CampaignDetailScreenView {
     fileprivate func headerWithImage() -> some View {
-        return // Image Section
-        ZStack(alignment: .topLeading) {
+         // Image Section
+        return ZStack(alignment: .topLeading) {
             Image(charityCampaign.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -83,8 +83,8 @@ extension CampaignDetailScreenView {
     }
     
     fileprivate func tagsSection() -> some View {
-        return // Tags Section
-        HStack {
+         // Tags Section
+        return HStack {
             Text("conflict")
                 .padding(.horizontal,8)
             
@@ -104,8 +104,8 @@ extension CampaignDetailScreenView {
     }
     
     fileprivate func statisticsSection() -> some View {
-        return // Statistics Section
-        HStack {
+         // Statistics Section
+        return HStack {
             VStack(alignment: .leading) {
                 Text("Meals shared")
                     .font(.system(size: 14))
@@ -135,8 +135,8 @@ extension CampaignDetailScreenView {
     }
     
     fileprivate func updatesSection() -> some View {
-        return // Updates Section
-        VStack(alignment: .leading) {
+         // Updates Section
+        return VStack(alignment: .leading) {
             HStack {
                 Text("6/3/24")
                     .font(.system(size: 14))
@@ -160,23 +160,25 @@ extension CampaignDetailScreenView {
     }
     
     fileprivate func overViewSection() -> some View {
-        return // Overview Section
-        VStack(alignment: .leading) {
+         // Overview Section
+        return VStack(alignment: .leading) {
             Text("Overview")
                 .font(.headline)
                 .padding(.bottom, 5)
             Text("Shared meals will provide emergency food assistance to families in Palestine.")
             Text("With conflict escalating in October 2023, Palestine is facing an urgent humanitarian crisis. 1.8 million people are now food insecure, many of whom have lost their homes and are seeking safety in shelters....")
-                .foregroundStyle(.gray)
-                .font(.system(size: 14))
+                .fontColorSizePadEnum(textStyleModifierType: .light)
+                
+//                .foregroundStyle(.gray)
+//                .font(.system(size: 14))
                 .padding(.top, 8)
         }
         .padding([.leading, .trailing, .top])
     }
     
     fileprivate func donateButton() -> some View {
-        return // Donate Button
-        Button(action: {
+         // Donate Button
+        return Button(action: {
                 // Action for donate
         }) {
             Text("Donate now")

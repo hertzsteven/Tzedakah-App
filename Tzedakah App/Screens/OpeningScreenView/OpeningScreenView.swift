@@ -103,10 +103,13 @@ struct ToolbarModifier: ViewModifier {
     }
 }
 
+
+
 extension View {
     func configureToolbar() -> some View {
         modifier(ToolbarModifier())
     }
+    
 }
 
 
