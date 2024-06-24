@@ -15,9 +15,13 @@ struct ImageGallery: View {
     var body: some View {
         VStack {
             
-            headerBlue()
+//            headerBlue()
             
             tabViewWithImage()
+                .containerRelativeFrame(.vertical, { sze, _ in
+                    sze / 3
+                })
+//                .frame(height: 300)
             
             thumbsLazyGrid()
             
@@ -71,7 +75,8 @@ extension ImageGallery {
     fileprivate func imageViewForTabs4(_ image: Image) -> some View {
         image
             .resizable()
-            .aspectRatio(contentMode: .fill)
+            .aspectRatio(1.5, contentMode: .fill)
+//            .aspectRatio(contentMode: .fill)
             .containerRelativeFrame(.horizontal) { len, _ in len/1.1 }
             .clipShape(RoundedRectangle(cornerRadius: 25.0))
             .padding()

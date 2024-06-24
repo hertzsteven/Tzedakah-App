@@ -11,43 +11,86 @@ struct CampaignDetailScreenView: View {
     
     @Environment(\.dismiss) private var dismiss
     
-    var charityCampaign: CharityCampaign
+    @EnvironmentObject var campaignVM: CampaignVM
     
+//    var charityCampaign: CharityCampaign
+    
+    var campaign: Campaign
+    
+    
+    @State private var selectedTb = 0
+    
+    let images = ["kidwithpot2", "kidscarrybag", "poorperson", "maneating", "ladysleeping", "kidwithpot2", "kidscarrybag", "poorperson"]
+    
+
     
     var body: some View {
-        ScrollView {
+        ZStack(alignment: .bottom) {
+            ScrollView {
 
-            VStack(alignment: .leading) {
-                
-                headerWithImage()
+                VStack(alignment: .leading) {
+                    
+                    headerWithImage()
 
-                tagsSection()
-                
-                statisticsSection()
-                
-                updatesSection()
-                
-                overViewSection()
-                
-                donateButton()
-            }
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        HStack {
-                            Image(systemName: "chevron.backward")
-                                .foregroundColor(.white)
-                                .font(.system(size: 16, weight: .heavy))
-//                            Text("Custom Back")
+                    tagsSection()
+                    
+                    statisticsSection()
+                    
+                    updatesSection()
+                    
+                    overViewSection()
+                    
+                    
+                    Text("Image Gallery")
+                        .padding([.horizontal, .top])
+                    
+                    
+                    tabViewWithImage()
+                        .containerRelativeFrame(.vertical, { sze, _ in
+                            sze / 3
+                        })
+        //                .frame(height: 300)
+
+                    
+                    thumbsLazyGrid()
+                    
+
+                    donateButton()
+                }
+                .navigationBarBackButtonHidden(true)
+    //            .toolbar {
+    //                ToolbarItem(placement: .bottomBar) {
+    //                        donateButton()
+    //                        .frame(maxWidth: .infinity)
+    //                        .padding()
+    //                }
+    //            }
+    //            .toolbarBackground(.hidden, for: .bottomBar)
+//                .toolbar(.hidden, for: .navigationBar)
+                .toolbar(.hidden, for: .tabBar)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            dismiss()
+                        } label: {
+                            HStack {
+                                Image(systemName: "chevron.backward")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 16, weight: .heavy))
+    //                            Text("Custom Back")
+                            }
                         }
                     }
-                }
             }
             }
-
+            HStack {
+                donateButton()
+            }
+            .padding(.horizontal)
+            .background(Color(UIColor.systemBackground).shadow(radius: 2))
+            .frame(maxWidth: .infinity)
+            }
+        .edgesIgnoringSafeArea(.bottom)
         .edgesIgnoringSafeArea(.top)
     }
 }
@@ -56,13 +99,13 @@ extension CampaignDetailScreenView {
     fileprivate func headerWithImage() -> some View {
          // Image Section
         return ZStack(alignment: .topLeading) {
-            Image(charityCampaign.imageName)
+            campaign.campaignImage
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width:400, height: 300)
                 .clipped()
                 .overlay(alignment: .bottom) {
-                    Text(charityCampaign.name)
+                    Text(campaign.name)
                         .font(.system(size: 28, weight: .semibold))
                         .foregroundStyle(.white)
                         .padding()
@@ -192,6 +235,66 @@ extension CampaignDetailScreenView {
     }
 }
 
-#Preview {
-    CampaignDetailScreenView(charityCampaign: CharityCampaign(id: 0, name: "Aid To Poor", description: "Providing aid to those in need.", tags: ["conflict", "emergency"], imageName: "kidscarrybag"))
+extension CampaignDetailScreenView {
+    
+    
+    fileprivate func tabViewWithImage() -> some View {
+        TabView(selection: $selectedTb) {
+            
+            ForEach(0..<images.count) { idx in
+                imageViewForTabs4(Image(images[idx]))
+            }
+        }
+        .tabViewStyle(.page)
+    }
+    
+    fileprivate func imageViewForTabs4(_ image: Image) -> some View {
+        image
+            .resizable()
+            .aspectRatio(1.5, contentMode: .fill)
+//            .aspectRatio(contentMode: .fill)
+            .containerRelativeFrame(.horizontal) { len, _ in len/1.1 }
+            .clipShape(RoundedRectangle(cornerRadius: 25.0))
+            .padding()
+    }
+    
+    
+    fileprivate func thumbsLazyGrid() -> some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 60, maximum: 100))]) {
+            
+            ForEach(0..<images.count) { idx in
+                Button {
+                    selectedTb = idx
+                } label: {
+                    imageViewForThumbnails(Image(images[idx]),
+                                           idx: idx,
+                                           selectedTb: selectedTb)
+                    .tag(idx)
+                }
+            }
+        }
+        .padding(.horizontal)
+    }
+    
+    func imageViewForThumbnails(_ image: Image,
+                                idx: Int,
+                                selectedTb: Int) -> some View {
+        image
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .cornerRadius(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(selectedTb == idx ?
+                            Color.red.opacity(0.7) :
+                                Color.clear, lineWidth: 4)
+            )
+    }
+
 }
+
+//#Preview {
+//    NavigationStack {
+//        CampaignDetailScreenView(charityCampaign: CharityCampaign(id: 0, name: "Aid To Poor", description: "Providing aid to those in need.", tags: ["conflict", "emergency"], imageName: "kidscarrybag"))
+//    }
+//}

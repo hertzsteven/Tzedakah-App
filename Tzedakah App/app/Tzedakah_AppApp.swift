@@ -16,9 +16,12 @@ struct Tzedakah_AppApp: App {
      UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.purple]
    }
 
+    @StateObject private var campaignVM = CampaignVM()
+    
     var body: some Scene {
         WindowGroup {
             TabMasterView()
+                .environmentObject(campaignVM)
         }
     }
 }

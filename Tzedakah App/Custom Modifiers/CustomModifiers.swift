@@ -48,6 +48,29 @@ enum TextStyleModifierType {
     
 }
 
+//  MARK: -  funcs that build modifiers
+struct ToolbarModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .toolbarBackground(
+                .navBar,
+                for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+    }
+}
+
+
+
+extension View {
+    func configureToolbar() -> some View {
+        modifier(ToolbarModifier())
+    }
+    
+}
+
+
 
 struct FontColorSizePadEnum: ViewModifier {
     
