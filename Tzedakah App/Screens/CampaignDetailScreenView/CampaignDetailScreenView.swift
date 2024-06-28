@@ -27,11 +27,11 @@ struct CampaignDetailScreenView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView {
-
+                
                 VStack(alignment: .leading) {
                     
                     headerWithImage()
-
+                    
                     tagsSection()
                     
                     statisticsSection()
@@ -49,24 +49,24 @@ struct CampaignDetailScreenView: View {
                         .containerRelativeFrame(.vertical, { sze, _ in
                             sze / 3
                         })
-        //                .frame(height: 300)
-
+                        //                .frame(height: 300)
+                    
                     
                     thumbsLazyGrid()
                     
-
+                    
                     donateButton()
                 }
                 .navigationBarBackButtonHidden(true)
-    //            .toolbar {
-    //                ToolbarItem(placement: .bottomBar) {
-    //                        donateButton()
-    //                        .frame(maxWidth: .infinity)
-    //                        .padding()
-    //                }
-    //            }
-    //            .toolbarBackground(.hidden, for: .bottomBar)
-//                .toolbar(.hidden, for: .navigationBar)
+                    //            .toolbar {
+                    //                ToolbarItem(placement: .bottomBar) {
+                    //                        donateButton()
+                    //                        .frame(maxWidth: .infinity)
+                    //                        .padding()
+                    //                }
+                    //            }
+                    //            .toolbarBackground(.hidden, for: .bottomBar)
+                    //                .toolbar(.hidden, for: .navigationBar)
                 .toolbar(.hidden, for: .tabBar)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -77,11 +77,11 @@ struct CampaignDetailScreenView: View {
                                 Image(systemName: "chevron.backward")
                                     .foregroundColor(.white)
                                     .font(.system(size: 16, weight: .heavy))
-    //                            Text("Custom Back")
+                                    //                            Text("Custom Back")
                             }
                         }
                     }
-            }
+                }
             }
             HStack {
                 donateButton()
